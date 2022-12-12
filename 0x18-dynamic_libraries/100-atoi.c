@@ -1,20 +1,11 @@
-#include "holberton.h"
-/**
- * _atoi - convert string to numbers
- *
- * Return: n
- */
-int _atoi(void)
-{
-	/* int x; */
-	/* char arr[]; */
+import random
+import ctypes
 
-	/* while (*s) */
-	/* { */
-	/* x++; */
-	/* if (*s >= 48 && *s <= '9') */
-	/* conv[i] = *s */
-	/* } */
-
-	return (0);
-}
+cops = ctypes.CDLL('./100-operations.so')
+a = random.randint(-111, 111)
+b = random.randint(-111, 111)
+print("{} + {} = {}".format(a, b, cops.add(a, b)))
+print("{} - {} = {}".format(a, b, cops.sub(a, b)))
+print("{} x {} = {}".format(a, b, cops.mul(a, b)))
+print("{} / {} = {}".format(a, b, cops.div(a, b)))
+print("{} % {} = {}".format(a, b, cops.mod(a, b)))
